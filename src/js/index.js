@@ -1,52 +1,45 @@
-const listaSelecaoFrontends = document.querySelectorAll(".frontend");
+const selecoes = document.querySelectorAll(".frontend");
+const cartoes = document.querySelectorAll(".cartao-frontend");
 
-listaSelecaoFrontends.forEach(frontend => {
+function selecionar(frontend, rolar = false) {
+    const cartao = document.getElementById("cartao-" + frontend.id);
+
+    if (!cartao) return;
+
+    selecoes.forEach(botao => {
+        const ativo = botao === frontend;
+
+        botao.classList.toggle("ativo", ativo);
+        botao.setAttribute("aria-pressed", String(ativo));
+    });
+
+    cartoes.forEach(item => {
+        const ativo = item === cartao;
+
+        item.classList.toggle("aberto", ativo);
+        item.hidden = !ativo;
+    });
+
+    if (rolar && window.matchMedia("(max-width: 750px)").matches) {
+        cartao.scrollIntoView({
+            behavior: window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches
+                ? "auto"
+                : "smooth",
+            block: "start"
+        });
+    }
+}
+
+selecoes.forEach(frontend => {
     frontend.addEventListener("click", () => {
-        esconderCartaoFrontend();
-
-        const idFrontendSelecionado = mostrarCartaoFrontendSelecionado(frontend);
-
-        desativarFrontendNaListagem();
-
-        ativarFrontendSelecionadoNaListagem(idFrontendSelecionado);
-
-        if (window.innerWidth < 820) {
-            moverParaCartaoSelecionado(idFrontendSelecionado);
-        }
+        selecionar(frontend, true);
     });
 });
 
-function ativarFrontendSelecionadoNaListagem(idFrontendSelecionado) {
-    const frontendSelecionadoNaListagem = document.getElementById(idFrontendSelecionado);
-    frontendSelecionadoNaListagem.classList.add("ativo");
+const inicial = document.querySelector(".frontend.ativo") || selecoes[0];
+
+if (inicial) {
+    selecionar(inicial);
 }
-
-function desativarFrontendNaListagem() {
-    const frontendAtivoNaListagem = document.querySelector(".ativo");
-    frontendAtivoNaListagem.classList.remove("ativo");
-}
-
-function mostrarCartaoFrontendSelecionado(frontend) {
-    const idFrontendSelecionado = frontend.attributes.id.value;
-    const idDoCartaoFrontendParaAbrir = "cartao-" + idFrontendSelecionado;
-    const cartaoFrontendParaAbrir = document.getElementById(idDoCartaoFrontendParaAbrir);
-    cartaoFrontendParaAbrir.classList.add("aberto");
-    return idFrontendSelecionado;
-}
-
-function esconderCartaoFrontend() {
-    const cartaoFrontendAberto = document.querySelector(".aberto");
-    cartaoFrontendAberto.classList.remove("aberto");
-}
-
-function moverParaCartaoSelecionado(idFrontendSelecionado) {
-    const cartaoSelecionado = document.getElementById("cartao-" + idFrontendSelecionado);
-
-    cartaoSelecionado.scrollIntoView({
-        behavior: "smooth",
-        block: "start", 
-        inline: "nearest"
-    });
-
-}
-
