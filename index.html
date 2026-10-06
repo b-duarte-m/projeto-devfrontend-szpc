@@ -7,34 +7,33 @@
     <title>Desenvolvimento Front-End</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/estilos.css">
     <link rel="stylesheet" href="./src/css/responsivo.css">
-    <link rel="stylesheet" href="./src/fonte/RedFive.ttf">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 </head>
 
 <body>
-    <div class="header">
-        <h1>Tecnologias usadas no Desenvolvimento Front-End</h1>
-        <div class="social-icons">
-            <a href="https://github.com/beatriz-duarte13" target="_blank">
-                <i class="fa-brands fa-github" style="color: #ffffff;"></i>
-                GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/beatriz-duarte-94aab9296/" target="_blank">
-                <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
-                Linkedin
-            </a>
+    <header class="header">
+        <div class="header-inner">
+            <div class="brand">
+                <span class="brand-symbol" aria-hidden="true">&lt;/&gt;</span>
+                <div><h1>Tecnologias do <span>Front-End</span></h1>
+                    <p>Explore as ferramentas que dão vida à web.</p></div>
+            </div>
+            <nav class="social-icons" aria-label="Redes sociais">
+                <a href="https://github.com/beatriz-duarte13" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Beatriz Duarte (abre em nova aba)" title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/beatriz-duarte-94aab9296/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Beatriz Duarte (abre em nova aba)" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+            </nav>
         </div>
-    </div>
+    </header>
     <main>
         <div class="frontends">
             <div class="cartoes-frontend">
@@ -121,7 +120,7 @@
                         <span class="tipo">Linguagem de Programação</span>
 
                         <div class="cartao-imagem">
-                            <img src="./src/imagens/ts.png " alt="TypeScript" />
+                            <img src="./src/imagens/ts.png" alt="TypeScript" />
                         </div>
                     </div>
 
@@ -425,82 +424,82 @@
 
             <nav class="listagem posicao-1">
                 <ul>
-                    <li class="frontend tipo-marcacao ativo" id="HTML">
+                    <li><button type="button" class="frontend tipo-marcacao ativo" id="HTML" aria-controls="cartao-HTML">
                         <img src="src/imagens/html.png" alt="HTML" />
                         <span>HTML</span>
-                    </li>
-                    <li class="frontend tipo-estilo" id="CSS">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-estilo" id="CSS" aria-controls="cartao-CSS">
                         <img src="src/imagens/css.png" alt="CSS" />
                         <span>CSS</span>
-                    </li>
-                    <li class="frontend tipo-programacao" id="JavaScript">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-programacao" id="JavaScript" aria-controls="cartao-JavaScript">
                         <img src="src/imagens/js.png" alt="JavaScript" />
                         <span>JavaScript</span>
-                    </li>
-                    <li class="frontend tipo-programacao" id="TypeScript">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-programacao" id="TypeScript" aria-controls="cartao-TypeScript">
                         <img src="src/imagens/ts.png" alt="TypeScript" />
                         <span>TypeScript</span>
-                    </li>
+                    </button></li>
                 </ul>
             </nav>
             <nav class="listagem posicao-2">
                 <ul>
-                    <li class="frontend tipo-biblioteca" id="React">
+                    <li><button type="button" class="frontend tipo-biblioteca" id="React" aria-controls="cartao-React">
                         <img src="src/imagens/react.png" alt="React" />
                         <span>React</span>
-                    </li>
-                    <li class="frontend tipo-framework" id="Bootstrap">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-framework" id="Bootstrap" aria-controls="cartao-Bootstrap">
                         <img src="src/imagens/bootstrap.png" alt="Bootstrap" />
                         <span>Bootstrap</span>
-                    </li>
-                    <li class="frontend tipo-framework" id="TailwindCSS">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-framework" id="TailwindCSS" aria-controls="cartao-TailwindCSS">
                         <img src="src/imagens/tailwind.png" alt="TailwindCSS" />
                         <span>Tailwind</span>
-                    </li>
-                    <li class="frontend tipo-framework" id="Vue">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-framework" id="Vue" aria-controls="cartao-Vue">
                         <img src="src/imagens/vue.png" alt="Vue" />
                         <span>Vue</span>
-                    </li>
+                    </button></li>
                 </ul>
             </nav>
             <nav class="listagem posicao-3">
                 <ul>
-                    <li class="frontend tipo-framework" id="Angular">
+                    <li><button type="button" class="frontend tipo-framework" id="Angular" aria-controls="cartao-Angular">
                         <img src="src/imagens/angular.png" alt="Angular" />
                         <span>Angular</span>
-                    </li>
-                    <li class="frontend tipo-framework" id="Jest">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-framework" id="Jest" aria-controls="cartao-Jest">
                         <img src="src/imagens/jest.png" alt="Jest" />
                         <span>Jest</span>
-                    </li>
-                    <li class="frontend tipo-framework" id="Next.js">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-framework" id="Next.js" aria-controls="cartao-Next.js">
                         <img src="src/imagens/next.js.png" alt="Next.js" />
                         <span>Next.js</span>
-                    </li>
-                    <li class="frontend tipo-processador" id="Sass">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-processador" id="Sass" aria-controls="cartao-Sass">
                         <img src="src/imagens/sass.png" alt="Sass" />
                         <span>Sass</span>
-                    </li>
+                    </button></li>
                 </ul>
             </nav>
             <nav class="listagem posicao-4">
                 <ul>
-                    <li class="frontend tipo-build" id="Vite">
+                    <li><button type="button" class="frontend tipo-build" id="Vite" aria-controls="cartao-Vite">
                         <img src="src/imagens/vite.png" alt="Vite" />
                         <span>Vite</span>
-                    </li>
-                    <li class="frontend tipo-teste" id="Cypress">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-teste" id="Cypress" aria-controls="cartao-Cypress">
                         <img src="src/imagens/cypress.png" alt="Cypress" />
                         <span>Cypress</span>
-                    </li>
-                    <li class="frontend tipo-api" id="APIRest">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-api" id="APIRest" aria-controls="cartao-APIRest">
                         <img src="src/imagens/apirest.png" alt="APIRest" />
                         <span>APIRest</span>
-                    </li>
-                    <li class="frontend tipo-api" id="GraphQL">
+                    </button></li>
+                    <li><button type="button" class="frontend tipo-api" id="GraphQL" aria-controls="cartao-GraphQL">
                         <img src="src/imagens/graphQL.png" alt="GraphQL" />
                         <span>GraphQL</span>
-                    </li>
+                    </button></li>
                 </ul>
             </nav>
         </div>
