@@ -25,7 +25,7 @@
                     <p>Explore as ferramentas que dão vida à web.</p></div>
             </div>
             <nav class="social-icons" aria-label="Redes sociais">
-                <a href="https://github.com/beatriz-duarte13" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Beatriz Duarte (abre em nova aba)" title="GitHub">
+                <a href="https://github.com/b-duarte-m" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Beatriz Duarte (abre em nova aba)" title="GitHub">
                     <i class="fa-brands fa-github" aria-hidden="true"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/beatriz-duarte-94aab9296/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Beatriz Duarte (abre em nova aba)" title="LinkedIn">
@@ -35,6 +35,12 @@
         </div>
     </header>
     <main>
+      <section class="explorador" aria-label="Explorar tecnologias">
+        <div class="explorador-topo"><div><span class="eyebrow">SEU MAPA DO FRONT-END</span><h2>Conheça. Escolha. Experimente.</h2><p>Da estrutura aos testes: descubra o papel de cada ferramenta.</p></div><span class="contador" aria-live="polite">16 tecnologias</span></div>
+        <div class="controles"><label class="busca"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="busca" type="search" placeholder="Buscar tecnologia..." aria-label="Buscar tecnologia"></label>
+        <div class="filtros" role="group" aria-label="Filtrar por categoria">
+        <button type="button" data-filtro="Todas" aria-pressed="true">Todas</button><button type="button" data-filtro="Fundamentos" aria-pressed="false">Fundamentos</button><button type="button" data-filtro="Interfaces" aria-pressed="false">Interfaces</button><button type="button" data-filtro="Ferramentas" aria-pressed="false">Ferramentas</button><button type="button" data-filtro="APIs" aria-pressed="false">APIs</button></div></div>
+      </section>
         <div class="frontends">
             <div class="cartoes-frontend">
                 <div class="cartao-frontend tipo-estilo aberto" id="cartao-HTML">
@@ -503,6 +509,9 @@
                 </ul>
             </nav>
         </div>
+      <p id="sem-resultados" hidden>Nenhuma tecnologia encontrada. Tente outro nome ou categoria.</p>
+      <section class="pratica" aria-labelledby="pratica-titulo"><div class="pratica-info"><span class="eyebrow">NA PRÁTICA</span><h2 id="pratica-titulo">HTML em ação</h2><p id="uso"></p><div class="cenario"><span>QUANDO USAR</span><p id="cenario"></p></div></div><div class="codigo"><div class="codigo-topo"><span id="codigo-label">Exemplo básico</span><button type="button" id="copiar">Copiar exemplo</button></div><pre><code id="exemplo"></code></pre><p id="copiado" role="status"></p></div></section>
+      <footer>Explore uma tecnologia acima para ver onde ela se encaixa em um projeto.</footer>
     </main>
     <script src="./src/js/index.js"></script>
 </body>
